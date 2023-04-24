@@ -8,6 +8,9 @@
 import UIKit
 
 class RecipeTableViewCell: UITableViewCell {
+    @IBOutlet weak var hStackView: UIStackView!
+    @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var recipeTitle: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
