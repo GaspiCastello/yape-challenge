@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Kingfisher
 
 class RecipeInteractor: PresenterToInteractorProtocol{
     weak var presenter: InteractorToPresenterProtocol?
@@ -25,16 +26,18 @@ class RecipeInteractor: PresenterToInteractorProtocol{
             }
             URLSession.shared.dataTask(with: request) { (data, response, error) in
                 if let response = response as? HTTPURLResponse {
-                    print("---> Response code \(response.statusCode)")
+                    print("--> Response code \(response.statusCode)")
                 }
                 if let error  {
                     completion(.failure(error))
                 } else if let data {
-                    completion(
-                        Result {
-                            try JSONDecoder()
-                                .decode(T.self,
-                                        from: data)})
+                    DispatchQueue.main.async {
+                        completion(
+                            Result {
+                                try JSONDecoder()
+                                    .decode(T.self,
+                                            from: data)})
+                    }
                 }
             }.resume()
 
@@ -46,11 +49,23 @@ class RecipeInteractor: PresenterToInteractorProtocol{
             guard let self else { return }
             switch result {
             case .success(let data):
+                self.cacheImages(data)
                 self.presenter?.recipeFetchedSuccess(recipeModel: data)
             case .failure(let error):
                 self.presenter?.recipeFetchFailed(error: error)
             }
         }
+    }
+
+    func cacheImages(_ data: RecipeListModel) {
+        let urls = data.recipes
+            .compactMap { URL(string: $0.image) }
+        ImagePrefetcher(urls: urls) {
+            skipped, failed, completed in
+            print("These resources are prefetched: \(completed)")
+            print("These resources are skipped: \(skipped)")
+            print("These resources are failed: \(failed)")
+        }.start()
     }
 
 }

@@ -12,17 +12,21 @@
         <!--Recipe View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="RecipeViewController" id="BYZ-38-t0r" customClass="RecipeViewController" customModule="yape_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecipeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="RecipeViewController" customModule="yape_challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-ao-Qm0">
-                                <rect key="frame" x="12" y="131" width="369" height="721"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fEZ-ao-Qm0">
+                                <rect key="frame" x="12" y="131" width="369" height="709"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <searchBar contentMode="redraw" showsSearchResultsButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07G-dX-Mdk">
+                            <searchBar contentMode="redraw" placeholder="Try a name or ingredient" showsSearchResultsButton="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="07G-dX-Mdk">
                                 <rect key="frame" x="12" y="67" width="369" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -40,7 +44,7 @@
                             <constraint firstItem="07G-dX-Mdk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="HzC-FN-j4S"/>
                             <constraint firstItem="07G-dX-Mdk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="Il0-cC-kgb"/>
                             <constraint firstItem="fEZ-ao-Qm0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="NRq-we-Io1"/>
-                            <constraint firstAttribute="bottom" secondItem="fEZ-ao-Qm0" secondAttribute="bottom" id="uhl-wZ-8aQ"/>
+                            <constraint firstAttribute="bottom" secondItem="fEZ-ao-Qm0" secondAttribute="bottom" constant="12" id="uhl-wZ-8aQ"/>
                             <constraint firstItem="fEZ-ao-Qm0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-12" id="wkO-uL-kzx"/>
                             <constraint firstItem="fEZ-ao-Qm0" firstAttribute="top" secondItem="07G-dX-Mdk" secondAttribute="bottom" constant="8" id="zNi-bL-bUX"/>
                         </constraints>

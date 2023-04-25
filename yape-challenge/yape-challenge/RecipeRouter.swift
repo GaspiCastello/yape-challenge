@@ -29,7 +29,7 @@ class RecipeRouter: PresenterToRouterProtocol {
     }
 
     static var mainstoryboard: UIStoryboard{
-        UIStoryboard(name:"Main", bundle: Bundle.main)
+        UIStoryboard(name: "Main", bundle: .main)
     }
 
     func pushToDetailScreen(navigationController: UINavigationController) {

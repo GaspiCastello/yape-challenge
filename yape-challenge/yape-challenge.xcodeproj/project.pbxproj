@@ -25,6 +25,7 @@
 		41C640BD29F6B03B00B9BB9D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640BC29F6B03B00B9BB9D /* Extensions.swift */; };
 		41C640C029F6BD3300B9BB9D /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640BE29F6BD3300B9BB9D /* RecipeTableViewCell.swift */; };
 		41C640C129F6BD3300B9BB9D /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C640BF29F6BD3300B9BB9D /* RecipeTableViewCell.xib */; };
+		41C640C429F6C06B00B9BB9D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 41C640C329F6C06B00B9BB9D /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41C640C429F6C06B00B9BB9D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,12 +119,12 @@
 		4160508629F1A657000A27EE /* yape-challenge */ = {
 			isa = PBXGroup;
 			children = (
+				4160509529F1A659000A27EE /* Info.plist */,
 				41C640B929F6026900B9BB9D /* appIcons */,
 				41C640B729F601A800B9BB9D /* appUI */,
 				41C640B229F600AE00B9BB9D /* appModules */,
 				41C640B629F6015A00B9BB9D /* common-utils */,
 				41C640B529F6013900B9BB9D /* appSettings */,
-				4160509529F1A659000A27EE /* Info.plist */,
 			);
 			path = "yape-challenge";
 			sourceTree = "<group>";
@@ -267,6 +269,9 @@
 			dependencies = (
 			);
 			name = "yape-challenge";
+			packageProductDependencies = (
+				41C640C329F6C06B00B9BB9D /* Kingfisher */,
+			);
 			productName = "yape-challenge";
 			productReference = 4160508429F1A657000A27EE /* yape-challenge.app */;
 			productType = "com.apple.product-type.application";
@@ -339,6 +344,9 @@
 				Base,
 			);
 			mainGroup = 4160507B29F1A657000A27EE;
+			packageReferences = (
+				41C640C229F6C06B00B9BB9D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 4160508529F1A657000A27EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -737,6 +745,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41C640C229F6C06B00B9BB9D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41C640C329F6C06B00B9BB9D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41C640C229F6C06B00B9BB9D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4160507C29F1A657000A27EE /* Project object */;
 }

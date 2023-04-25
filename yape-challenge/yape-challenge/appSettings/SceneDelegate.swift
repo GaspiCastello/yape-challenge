@@ -26,7 +26,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationController.viewControllers = [recipeVc]
 
         /* Setting up the root view-controller as ui-navigation-controller */
-        window = UIWindow(frame: UIScreen.main.bounds)
+        window = UIWindow(windowScene: scene as! UIWindowScene)
+
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
