@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 extension String {
     func cleanHTMLTags() -> String? {
@@ -42,5 +43,41 @@ extension UIImageView {
                 }
             }
         }
+    }
+}
+
+extension UIViewController {
+    func showError(error: Error) {
+        let alert = UIAlertController(
+            title: "Alert",
+            message: "Problem from API",
+            preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(
+            UIAlertAction(
+                title: "ACEPTAR",
+                style: UIAlertAction.Style.default,
+                handler: nil))
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
+    }
+}
+
+extension MKMapView {
+
+    func setPin(_ location: CLLocationCoordinate2D,
+                title: String = "",
+                subTitle: String = "",
+                regionRadius: CLLocationDistance = 1000) {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = title
+        annotation.subtitle = subTitle
+        let coordinateRegion = MKCoordinateRegion(
+            center: annotation.coordinate,
+            latitudinalMeters: regionRadius,
+            longitudinalMeters: regionRadius)
+        setRegion(coordinateRegion, animated: true)
+        addAnnotation(annotation)
     }
 }

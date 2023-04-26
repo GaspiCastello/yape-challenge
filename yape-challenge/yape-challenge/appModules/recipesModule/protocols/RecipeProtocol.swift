@@ -7,24 +7,31 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 protocol ViewToPresenterProtocol: AnyObject {
     var view: PresenterToViewProtocol? { get set }
     var interactor: PresenterToInteractorProtocol? { get set }
     var router: PresenterToRouterProtocol? { get set }
-    func startFetchingRecipes()
-    func showRecipeDetailController(navigationController: UINavigationController)
 
+    var recipesCount: Int { get }
+    var viewModel: RecipeListModel? { get }
+
+    func prefetchTableImages(indexPaths: [IndexPath])
+    func startFetchingRecipes()
+    func showRecipeDetailController(data: RecipeModel)
+    func getRecipe(at index: Int) -> RecipeModel?
+    func textdidChanged(searchText: String)
 }
 
 protocol PresenterToViewProtocol: AnyObject {
-    func showRecipe(recipeArray: RecipeListModel)
+    func updateUI()
     func showError(error: Error)
 }
 
 protocol PresenterToRouterProtocol: AnyObject {
-    static func createModule() -> RecipeViewController
-    func pushToDetailScreen(navigationController: UINavigationController)
+    func createModule(in window: UIWindow) 
+    func pushToDetailScreen(_ data: RecipeModel)
 }
 
 protocol PresenterToInteractorProtocol: AnyObject {
@@ -33,7 +40,7 @@ protocol PresenterToInteractorProtocol: AnyObject {
 }
 
 protocol InteractorToPresenterProtocol: AnyObject {
-    func recipeFetchedSuccess(recipeModel: RecipeListModel)
+    func recipeFetchedSuccess(modelSelected: RecipeListModel)
     func recipeFetchFailed(error: Error)
 }
 

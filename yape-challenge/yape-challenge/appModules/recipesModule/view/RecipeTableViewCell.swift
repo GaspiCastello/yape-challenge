@@ -20,11 +20,11 @@ class RecipeTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        contentView.backgroundColor = .white
         recipeTitle.textColor = selected ? .gray : .black
     }
 
     func setCell(with data: RecipeModel) {
+        contentView.backgroundColor = .white
         let url = data.image
         recipeImage.kf.setImage(with: URL(string: url)!)
         recipeImage.setCornerRadius()

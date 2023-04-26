@@ -7,34 +7,38 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class RecipeRouter: PresenterToRouterProtocol {
 
-    static func createModule() -> RecipeViewController {
+    var navigationController: UINavigationController?
+    static var mainstoryboard: UIStoryboard { UIStoryboard(name: "Main", bundle: .main) }
 
-        let view = mainstoryboard.instantiateViewController(withIdentifier: "RecipeViewController") as! RecipeViewController
-
-        let presenter: ViewToPresenterProtocol & InteractorToPresenterProtocol = RecipePresenter()
+    func createModule(in window: UIWindow) {
+        let view = RecipeRouter.mainstoryboard
+            .instantiateViewController(
+                withIdentifier: "RecipeViewController"
+            ) as! RecipeViewController
+        
+        let presenter: ViewToPresenterProtocol &
+        InteractorToPresenterProtocol = RecipePresenter()
         let interactor: PresenterToInteractorProtocol = RecipeInteractor()
-        let router:PresenterToRouterProtocol = RecipeRouter()
 
         view.presenter = presenter
         presenter.view = view
-        presenter.router = router
+        presenter.router = self
         presenter.interactor = interactor
         interactor.presenter = presenter
 
-        return view
-
+        navigationController = UINavigationController(rootViewController: view)
+        window.makeKeyAndVisible()
+        window.rootViewController = navigationController
     }
 
-    static var mainstoryboard: UIStoryboard{
-        UIStoryboard(name: "Main", bundle: .main)
+    func pushToDetailScreen(_ data: RecipeModel) {
+        guard let navigationController else { return }
+        RecipeDetailRouter()
+            .present(navigationController: navigationController,
+                     modelSelected: data)
     }
-
-    func pushToDetailScreen(navigationController: UINavigationController) {
-        let detailVC = UIViewController()
-        navigationController.pushViewController(detailVC, animated: true)
-    }
-
 }

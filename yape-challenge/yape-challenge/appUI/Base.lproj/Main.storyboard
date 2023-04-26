@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -58,8 +59,142 @@
             </objects>
             <point key="canvasLocation" x="95.419847328244273" y="-2.1126760563380285"/>
         </scene>
+        <!--Recipe Detail View Controller-->
+        <scene sceneID="vrg-QA-4a5">
+            <objects>
+                <viewController storyboardIdentifier="RecipeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="b7y-ji-MnC" customClass="RecipeDetailViewController" customModule="yape_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4my-jB-qBN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XJh-OR-WzM">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Ma5-gi-ZpS"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ap1-OI-fPb">
+                                <rect key="frame" x="12" y="408" width="369" height="410"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yNr-3p-Ibj">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Rbv-hf-t6X"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqr-Gh-slz">
+                                        <rect key="frame" x="0.0" y="9.0000000000000018" width="369" height="21.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqC-l9-XyJ">
+                                        <rect key="frame" x="0.0" y="38.666666666666686" width="369" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="anX-ky-H1S"/>
+                                        </constraints>
+                                    </view>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" text="Text  description" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jby-X9-3vY">
+                                        <rect key="frame" x="0.0" y="47.666666666666686" width="369" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="tys-8J-mnk"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nju-YU-d9l">
+                                        <rect key="frame" x="0.0" y="205.66666666666663" width="369" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="d84-UB-koe"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ORIGIN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Gj-t6-jYi">
+                                        <rect key="frame" x="0.0" y="214.66666666666663" width="369" height="21.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="efD-hb-mPz">
+                                        <rect key="frame" x="0.0" y="244.33333333333337" width="369" height="1"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Ea6-9j-o8C"/>
+                                        </constraints>
+                                    </view>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QnM-da-ewG">
+                                        <rect key="frame" x="0.0" y="253.33333333333337" width="369" height="156.66666666666663"/>
+                                        <standardMapConfiguration key="preferredConfiguration"/>
+                                    </mapView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="dqC-l9-XyJ" secondAttribute="trailing" id="YXo-aD-8Ie"/>
+                                    <constraint firstItem="dqC-l9-XyJ" firstAttribute="leading" secondItem="Ap1-OI-fPb" secondAttribute="leading" id="yev-xe-ZFm"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="W0u-qM-SR0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XJh-OR-WzM" firstAttribute="leading" secondItem="W0u-qM-SR0" secondAttribute="leading" id="0RM-Hw-CJy"/>
+                            <constraint firstItem="Ap1-OI-fPb" firstAttribute="top" secondItem="XJh-OR-WzM" secondAttribute="bottom" constant="8" id="2Xo-tA-vDK"/>
+                            <constraint firstItem="W0u-qM-SR0" firstAttribute="trailing" secondItem="Ap1-OI-fPb" secondAttribute="trailing" constant="12" id="FW7-9u-twr"/>
+                            <constraint firstItem="XJh-OR-WzM" firstAttribute="top" secondItem="4my-jB-qBN" secondAttribute="top" id="ZD2-w7-dKi"/>
+                            <constraint firstItem="Ap1-OI-fPb" firstAttribute="leading" secondItem="W0u-qM-SR0" secondAttribute="leading" constant="12" id="vID-Wc-MUt"/>
+                            <constraint firstItem="Ap1-OI-fPb" firstAttribute="bottom" secondItem="W0u-qM-SR0" secondAttribute="bottom" id="vQX-2Y-ajC"/>
+                            <constraint firstItem="W0u-qM-SR0" firstAttribute="trailing" secondItem="XJh-OR-WzM" secondAttribute="trailing" id="xaR-zp-2Dt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionText" destination="Jby-X9-3vY" id="52s-aX-gt1"/>
+                        <outlet property="mapView" destination="QnM-da-ewG" id="EX6-xO-MRQ"/>
+                        <outlet property="recipeImage" destination="XJh-OR-WzM" id="KJK-1w-w7r"/>
+                        <outlet property="titleLabel" destination="nqr-Gh-slz" id="wvC-aJ-rGQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izP-2z-K9J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838.93129770992368" y="-2.1126760563380285"/>
+        </scene>
+        <!--Recipe Origin View Controller-->
+        <scene sceneID="deW-SA-E5T">
+            <objects>
+                <viewController storyboardIdentifier="RecipeOriginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="A0m-so-7kc" customClass="RecipeOriginViewController" customModule="yape_challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uH0-oU-Bm6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Nk-te-Emd">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3MX-Cz-xWh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Nk-te-Emd" firstAttribute="leading" secondItem="3MX-Cz-xWh" secondAttribute="leading" id="8Mw-kK-NDd"/>
+                            <constraint firstAttribute="trailing" secondItem="9Nk-te-Emd" secondAttribute="trailing" id="IYF-0j-rFy"/>
+                            <constraint firstAttribute="bottom" secondItem="9Nk-te-Emd" secondAttribute="bottom" id="obI-vs-QxR"/>
+                            <constraint firstItem="9Nk-te-Emd" firstAttribute="top" secondItem="uH0-oU-Bm6" secondAttribute="top" id="sYv-w6-A5Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="9Nk-te-Emd" id="ieR-ZP-kv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2vE-os-cVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1587" y="13"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

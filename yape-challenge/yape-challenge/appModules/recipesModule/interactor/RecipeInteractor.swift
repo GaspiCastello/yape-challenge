@@ -50,7 +50,7 @@ class RecipeInteractor: PresenterToInteractorProtocol{
             switch result {
             case .success(let data):
                 self.cacheImages(data)
-                self.presenter?.recipeFetchedSuccess(recipeModel: data)
+                self.presenter?.recipeFetchedSuccess(modelSelected: data)
             case .failure(let error):
                 self.presenter?.recipeFetchFailed(error: error)
             }
