@@ -15,6 +15,7 @@ class RecipeDetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var descriptionLabel: UILabel!
 
     var presenter: RecipeDetailViewToPresenterProtocol?
 
@@ -31,7 +32,7 @@ class RecipeDetailViewController: UIViewController {
         let url = modelSelected.image
         recipeImage.kf.setImage(with: URL(string: url)!)
         titleLabel.text = modelSelected.title.uppercased()
-        descriptionText.text = modelSelected.summary.cleanHTMLTags()
+        descriptionLabel.text = modelSelected.summary.cleanHTMLTags()
         mapView.setCornerRadius()
         mapView.setPin(location,
                        title: modelSelected.title.uppercased(),
