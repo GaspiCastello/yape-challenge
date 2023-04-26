@@ -18,11 +18,14 @@ class RecipeViewController: UIViewController {
         super.viewDidLoad()
         setTable()
         presenter?.startFetchingRecipes()
-        // Do any additional setup after loading the view.
+        title = "Listado"
     }
 
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.backgroundColor = UIColor(
+            white: 1,
+            alpha: 0.5)
     }
 
     func setTable() {

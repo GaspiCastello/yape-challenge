@@ -24,6 +24,7 @@ class RecipeDetailViewController: UIViewController {
         setup()
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = .black
+        title = "Detalles"
     }
 
     private func setup() {

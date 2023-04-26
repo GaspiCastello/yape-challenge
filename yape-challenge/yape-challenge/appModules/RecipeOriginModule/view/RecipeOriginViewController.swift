@@ -19,6 +19,7 @@ class RecipeOriginViewController: UIViewController, MKMapViewDelegate {
         guard let location = presenter?.location else { return }
         mapView.setPin(location , regionRadius: 300000)
         setup()
+        title = "Mapa"
     }
 
     func setup() {
