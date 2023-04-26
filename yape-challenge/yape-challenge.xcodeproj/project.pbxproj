@@ -24,12 +24,12 @@
 		4160509F29F1A65A000A27EE /* yape_challengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160509E29F1A65A000A27EE /* yape_challengeTests.swift */; };
 		416050A929F1A65A000A27EE /* yape_challengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416050A829F1A65A000A27EE /* yape_challengeUITests.swift */; };
 		416050AB29F1A65A000A27EE /* yape_challengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416050AA29F1A65A000A27EE /* yape_challengeUITestsLaunchTests.swift */; };
+		41AB3A8629F9EFC900B3737A /* RecipeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AB3A8529F9EFC900B3737A /* RecipeRouter.swift */; };
 		41C640A229F5F34800B9BB9D /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640A129F5F34800B9BB9D /* AppConstants.swift */; };
 		41C640A429F5F36500B9BB9D /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640A329F5F36500B9BB9D /* RecipeModel.swift */; };
 		41C640A829F5F44E00B9BB9D /* RecipeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640A729F5F44E00B9BB9D /* RecipeProtocol.swift */; };
 		41C640AB29F5F6BA00B9BB9D /* RecipePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640AA29F5F6BA00B9BB9D /* RecipePresenter.swift */; };
 		41C640B029F5F88D00B9BB9D /* RecipeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640AF29F5F88D00B9BB9D /* RecipeInteractor.swift */; };
-		41C640BB29F6069400B9BB9D /* RecipeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640BA29F6069400B9BB9D /* RecipeRouter.swift */; };
 		41C640BD29F6B03B00B9BB9D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640BC29F6B03B00B9BB9D /* Extensions.swift */; };
 		41C640C029F6BD3300B9BB9D /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C640BE29F6BD3300B9BB9D /* RecipeTableViewCell.swift */; };
 		41C640C129F6BD3300B9BB9D /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41C640BF29F6BD3300B9BB9D /* RecipeTableViewCell.xib */; };
@@ -75,12 +75,12 @@
 		416050A429F1A65A000A27EE /* yape-challengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "yape-challengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		416050A829F1A65A000A27EE /* yape_challengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yape_challengeUITests.swift; sourceTree = "<group>"; };
 		416050AA29F1A65A000A27EE /* yape_challengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yape_challengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		41AB3A8529F9EFC900B3737A /* RecipeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeRouter.swift; path = appModules/recipesModule/router/RecipeRouter.swift; sourceTree = "<group>"; };
 		41C640A129F5F34800B9BB9D /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		41C640A329F5F36500B9BB9D /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		41C640A729F5F44E00B9BB9D /* RecipeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeProtocol.swift; sourceTree = "<group>"; };
 		41C640AA29F5F6BA00B9BB9D /* RecipePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipePresenter.swift; sourceTree = "<group>"; };
 		41C640AF29F5F88D00B9BB9D /* RecipeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInteractor.swift; sourceTree = "<group>"; };
-		41C640BA29F6069400B9BB9D /* RecipeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRouter.swift; sourceTree = "<group>"; };
 		41C640BC29F6B03B00B9BB9D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		41C640BE29F6BD3300B9BB9D /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
 		41C640BF29F6BD3300B9BB9D /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
@@ -327,7 +327,7 @@
 		41C640B329F600CB00B9BB9D /* router */ = {
 			isa = PBXGroup;
 			children = (
-				41C640BA29F6069400B9BB9D /* RecipeRouter.swift */,
+				41AB3A8529F9EFC900B3737A /* RecipeRouter.swift */,
 			);
 			name = router;
 			path = ../..;
@@ -530,9 +530,9 @@
 				4160508A29F1A657000A27EE /* SceneDelegate.swift in Sources */,
 				4156CD6429F9A040006AC34A /* RecipeOriginRouter.swift in Sources */,
 				4156CD4E29F81B6F006AC34A /* RecipeDetailProtocols.swift in Sources */,
-				41C640BB29F6069400B9BB9D /* RecipeRouter.swift in Sources */,
 				4156CD4C29F81B10006AC34A /* RecipeDetailRouter.swift in Sources */,
 				4156CD6229F9A036006AC34A /* RecipeOriginPresenter.swift in Sources */,
+				41AB3A8629F9EFC900B3737A /* RecipeRouter.swift in Sources */,
 				4156CD6029F9A02C006AC34A /* RecipeOriginProtocols.swift in Sources */,
 				41C640A229F5F34800B9BB9D /* AppConstants.swift in Sources */,
 				4156CD4329F75D85006AC34A /* RecipeDetailViewController.swift in Sources */,
