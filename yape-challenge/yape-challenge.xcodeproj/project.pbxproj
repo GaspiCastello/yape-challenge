@@ -171,7 +171,7 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
-		4156CD5729F99FA7006AC34A /* RecipeOriginModule */ = {
+		4156CD5729F99FA7006AC34A /* recipeOriginModule */ = {
 			isa = PBXGroup;
 			children = (
 				4156CD5E29F9A011006AC34A /* protocols */,
@@ -180,7 +180,7 @@
 				4156CD5C29F99FFC006AC34A /* entity */,
 				4156CD5B29F99FF4006AC34A /* router */,
 			);
-			path = RecipeOriginModule;
+			path = recipeOriginModule;
 			sourceTree = "<group>";
 		};
 		4156CD5A29F99FE7006AC34A /* view */ = {
@@ -317,7 +317,7 @@
 		41C640B229F600AE00B9BB9D /* appModules */ = {
 			isa = PBXGroup;
 			children = (
-				4156CD5729F99FA7006AC34A /* RecipeOriginModule */,
+				4156CD5729F99FA7006AC34A /* recipeOriginModule */,
 				4156CD4429F81A77006AC34A /* recipeDetailModule */,
 				41C640B429F600E200B9BB9D /* recipesModule */,
 			);
