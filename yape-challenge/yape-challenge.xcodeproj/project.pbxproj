@@ -15,6 +15,9 @@
 		4156CD6029F9A02C006AC34A /* RecipeOriginProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4156CD5F29F9A02C006AC34A /* RecipeOriginProtocols.swift */; };
 		4156CD6229F9A036006AC34A /* RecipeOriginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4156CD6129F9A036006AC34A /* RecipeOriginPresenter.swift */; };
 		4156CD6429F9A040006AC34A /* RecipeOriginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4156CD6329F9A040006AC34A /* RecipeOriginRouter.swift */; };
+		415FDEAC29FABAF2009F333E /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FDEAB29FABAF2009F333E /* API.swift */; };
+		415FDEB029FAD51B009F333E /* yapeInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FDEAF29FAD51B009F333E /* yapeInteractorTest.swift */; };
+		415FDEB229FADA4F009F333E /* yapePresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 415FDEB129FADA4F009F333E /* yapePresenterTest.swift */; };
 		4160508829F1A657000A27EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160508729F1A657000A27EE /* AppDelegate.swift */; };
 		4160508A29F1A657000A27EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160508929F1A657000A27EE /* SceneDelegate.swift */; };
 		4160508C29F1A657000A27EE /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4160508B29F1A657000A27EE /* RecipeViewController.swift */; };
@@ -62,6 +65,9 @@
 		4156CD5F29F9A02C006AC34A /* RecipeOriginProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeOriginProtocols.swift; sourceTree = "<group>"; };
 		4156CD6129F9A036006AC34A /* RecipeOriginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeOriginPresenter.swift; sourceTree = "<group>"; };
 		4156CD6329F9A040006AC34A /* RecipeOriginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeOriginRouter.swift; sourceTree = "<group>"; };
+		415FDEAB29FABAF2009F333E /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		415FDEAF29FAD51B009F333E /* yapeInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yapeInteractorTest.swift; sourceTree = "<group>"; };
+		415FDEB129FADA4F009F333E /* yapePresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yapePresenterTest.swift; sourceTree = "<group>"; };
 		4160508429F1A657000A27EE /* yape-challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yape-challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4160508729F1A657000A27EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4160508929F1A657000A27EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -222,6 +228,16 @@
 			path = protocols;
 			sourceTree = "<group>";
 		};
+		415FDEAA29FABADB009F333E /* cases */ = {
+			isa = PBXGroup;
+			children = (
+				415FDEAB29FABAF2009F333E /* API.swift */,
+				415FDEAF29FAD51B009F333E /* yapeInteractorTest.swift */,
+				415FDEB129FADA4F009F333E /* yapePresenterTest.swift */,
+			);
+			path = cases;
+			sourceTree = "<group>";
+		};
 		4160507B29F1A657000A27EE = {
 			isa = PBXGroup;
 			children = (
@@ -258,6 +274,7 @@
 		4160509D29F1A65A000A27EE /* yape-challengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				415FDEAA29FABADB009F333E /* cases */,
 				4160509E29F1A65A000A27EE /* yape_challengeTests.swift */,
 			);
 			path = "yape-challengeTests";
@@ -545,7 +562,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				415FDEAC29FABAF2009F333E /* API.swift in Sources */,
+				415FDEB229FADA4F009F333E /* yapePresenterTest.swift in Sources */,
 				4160509F29F1A65A000A27EE /* yape_challengeTests.swift in Sources */,
+				415FDEB029FAD51B009F333E /* yapeInteractorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,7 +794,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RV4PYSDU98;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gasparCastello.yape-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -794,7 +814,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RV4PYSDU98;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gasparCastello.yape-challengeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

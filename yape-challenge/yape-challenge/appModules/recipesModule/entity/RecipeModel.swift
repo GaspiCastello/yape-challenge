@@ -15,31 +15,11 @@ struct RecipeListModel: Codable {
 }
 
 struct RecipeModel: Codable {
-    let vegetarian: Bool
-    let vegan: Bool
-    let glutenFree: Bool
-    let dairyFree: Bool
-    let veryHealthy: Bool
-    let cheap: Bool
-    let veryPopular: Bool
-    let sustainable: Bool
-    let lowFodmap: Bool
-    let weightWatcherSmartPoints: Int
-    let pricePerServing: Double
     let extendedIngredients: [Ingredients]
-    let id: Int
     let title: String
-    let readyInMinutes: Int
-    let servings: Int
-    let sourceUrl: String
     let image: String
     let summary: String
-    let cuisines: [String]
     let origin: Coordinate
-    let dishTypes: [String]
-    let diets: [String]
-    let occasions: [String]
-    let instructions: String
 }
 
 struct Coordinate: Codable {
