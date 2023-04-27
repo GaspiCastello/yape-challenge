@@ -1,6 +1,6 @@
 # Yape Mobile iOS Challenge - Recipes
 
-##Challenge Instructions:
+##Challenge Instructions:##
 Build an app with three screens: 
 Home, Details and Map that allows the user to filter on a list and see details.
 
